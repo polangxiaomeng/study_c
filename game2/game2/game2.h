@@ -9,7 +9,7 @@
 #define COL 9
 #define ROWS ROW+2
 #define COLS COL+2
-#define MINE 79
+#define MINE 10
 
 
 //≥ı ºªØ±≥æ∞

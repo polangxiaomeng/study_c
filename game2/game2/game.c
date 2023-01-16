@@ -85,6 +85,7 @@ void CleanMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 			}
 			else
 			{
+				PrintBoard(mine, ROW, COL);
 				printf("你踩到了雷，游戏结束\n");
 				break;
 			}
@@ -93,6 +94,7 @@ void CleanMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 			printf("输入非法，请重新输入\n");
 		if (win == ROW * COL - MINE)
 		{
+			PrintBoard(mine, ROW, COL);
 			printf("恭喜您，扫雷成功\n");
 			break;
 		}

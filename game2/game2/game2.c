@@ -15,8 +15,6 @@ void game()
 	PrintBoard(show, ROW, COL);
 	//布置雷
 	SetMine(mine, ROW, COL);
-	PrintBoard(mine, ROW, COL);
-
 	//玩家排雷
 	CleanMine(mine, show, ROW, COL);
 }
@@ -30,7 +28,6 @@ void menu()
 	printf("******* 0.退出游戏 *******\n");
 	printf("**************************\n");
 	printf("**************************\n");
-	
 }
 
 
