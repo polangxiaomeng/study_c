@@ -1,12 +1,22 @@
-[TOC]
+> **🍕博客主页：️[自信不孤单](https://blog.csdn.net/czh1592272237)**
+>
+> **🍬文章专栏：[C语言](https://blog.csdn.net/czh1592272237/category_12209876.html)**
+>
+> **🍚代码仓库：[破浪晓梦](https://gitee.com/polang-xiaomeng/study_c)**
+>
+> **🍭欢迎关注：欢迎大家点赞收藏+关注**
 
 # 用C语言实现三子棋
 
-## 1.三子棋是什么呢？
+[toc]
+
+---
+
+# 1. 三子棋是什么呢？
 
 三子棋是一种民间传统游戏，又叫九宫棋、圈圈叉叉棋、一条龙、井字棋等。游戏分为双方对战，双方依次在9宫格棋盘上摆放棋子，率先将自己的三个棋子走成一条线就视为胜利，而对方就算输了，但是三子棋在很多时候会出现和棋的局面。
 
-## 2.实现思路
+# 2. 实现思路
 
 1. 创建菜单界面（会有开始和结束的选项）
 2. 初始化棋盘
@@ -18,7 +28,7 @@
 
 新建多个文件实现，将头文件的包含、define定义、函数声明放在game.h的头文件中，将各部分函数的实现放在game.c文件中，将游戏的总体实现放在test.c的文件中。
 
-### 1.创建菜单界面
+## 2.1 创建菜单界面
 
 ```c
 void menu()
@@ -32,7 +42,7 @@ void menu()
 }
 ```
 
-### 2.初始化棋盘
+## 2.2 初始化棋盘
 
 先创建一个二维数组模拟棋盘坐标，将二维数组传入函数进行初始化
 
@@ -49,7 +59,7 @@ void Initboard(char board[ROW][COL], int row, int col)
 }
 ```
 
-### 3.打印棋盘
+## 2.3 打印棋盘
 
 ```c
 void DisplayBoard(char board[ROW][COL], int row, int col)
@@ -77,7 +87,7 @@ void DisplayBoard(char board[ROW][COL], int row, int col)
 }
 ```
 
-### 4.玩家落子
+## 2.4 玩家落子
 
 ```c
 void Player(char board[ROW][COL], int row, int col)
@@ -105,7 +115,7 @@ void Player(char board[ROW][COL], int row, int col)
 }
 ```
 
-### 5.电脑随机落子
+## 2.5 电脑随机落子
 
 在主函数调用srand((unsigned)time(NULL)); 后面直接用rand就可以生成随机值
 
@@ -128,7 +138,7 @@ void Computer(char board[ROW][COL], int row, int col)
 }
 ```
 
-### 6.判断胜负
+## 2.6 判断胜负
 
 将落子的类型传给函数，调用函数，若玩家胜则返回*，若电脑胜则返回#，若平局则返回P，若未分出胜负则返回C
 
@@ -172,7 +182,7 @@ char JudgeWin(char board[ROW][COL], int row, int col, char type)
 }
 ```
 
-### 7.完整代码
+## 2.7 完整代码
 
 ```c
 //game.h文件
@@ -413,3 +423,7 @@ int main()
 }
 ```
 
+==到此，关于《三子棋》的内容就结束了
+感谢大家的观看
+如果对您有帮助，请一键三连
+您的支持就是我创作最大的动力！！！==
