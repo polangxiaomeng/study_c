@@ -1,12 +1,19 @@
-[TOC]
+> **🍕博客主页：️自信不孤单**
+> **🍬文章专栏：C语言**
+> **🍚代码仓库：破浪晓梦**
+> **🍭欢迎关注：欢迎大家点赞收藏+关注**
 
 # 用C语言实现扫雷
 
-## 1.游戏规则介绍
+[toc]
+
+---
+
+# 1.游戏规则介绍
 
 扫雷是一个十分经典的游戏，游戏目标是在最短的时间内根据出现的数字找出所有非雷格子，同时避免踩雷，踩到一个雷即全盘皆输。
 
-## 2.实现思路
+# 2.实现思路
 
 1. 创建菜单界面
 2. 初始化地图
@@ -16,7 +23,7 @@
 
 新建多个文件实现，将头文件的包含、define定义、函数声明放在game.h的头文件中，将各部分函数的实现放在game.c文件中，将游戏的总体实现放在test.c的文件中。
 
-### 1.创建菜单界面
+## 2.1 创建菜单界面
 
 ```c
 void menu()
@@ -31,7 +38,7 @@ void menu()
 
 ```
 
-## 2.初始化地图
+## 2.2 初始化地图
 
 先创建两个二维数组
 
@@ -60,7 +67,7 @@ InitMine(mine, ROWS, COLS, '0');
 InitMine(show, ROWS, COLS, '*');
 ```
 
-### 3.打印地图
+## 2.3.打印地图
 
 ```c
 void PrintBoard(char board[ROWS][COLS], int row, int col)
@@ -84,7 +91,7 @@ void PrintBoard(char board[ROWS][COLS], int row, int col)
 }
 ```
 
-### 4.布置雷
+## 2.4 布置雷
 
 这里只需将mine数组中的'0'改为'1'来代替雷
 
@@ -108,9 +115,9 @@ void SetMine(char mine[ROWS][COLS], int row, int col)
 }
 ```
 
-### 5.排雷
+## 2.5 排雷
 
-#### 5.1排查周围8个单位雷的个数
+### 2.5.1 排查周围8个单位雷的个数
 
 ```
 //排查周围雷的个数
@@ -123,7 +130,7 @@ int CheckMineCount(char mine[ROWS][COLS], int x, int y)
 }
 ```
 
-#### 5.2玩家排雷实现
+### 2.5.2 玩家排雷实现
 
 ```c
 void CleanMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
@@ -168,7 +175,7 @@ void CleanMine(char mine[ROWS][COLS], char show[ROWS][COLS], int row, int col)
 }
 ```
 
-## 3.完整代码
+# 3. 完整代码
 
 ```c
 //game.h文件
@@ -363,3 +370,7 @@ int main()
 }
 ```
 
+==到此，关于《扫雷》的内容就结束了
+感谢大家的观看
+如果对您有帮助，请一键三连
+您的支持就是我创作最大的动力！！！==
